@@ -23,7 +23,7 @@ app.app_context().push()  # create an app context before initializing db
 
 #variable nummer!!
 Number_to_guess = random.randint(0,50)
-Beginning_Game = True
+
 
 
 HUB_URL = 'http://localhost:5555'
@@ -111,7 +111,6 @@ def send_message():
 
 def read_messages():
 
-    global Beginning_Game
     global CHANNEL_FILE
 
     try:
@@ -120,17 +119,7 @@ def read_messages():
         return []
     try:
         messages = json.load(f)
-        if Beginning_Game == True:
-            
-            answer_bot = "Heyloo. You have entered my guessing game. Enter a number between 0 and 50. Happy Playing :)"
 
-            time_stamp = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%f")
-            response = {'content':answer_bot, 'sender':'Bot: ILSANI', 'timestamp':time_stamp}
-
-            messages.append(response)
-            save_messages(messages)
-
-            Beginning_Game = False
     except json.decoder.JSONDecodeError:
         messages = []
     f.close()

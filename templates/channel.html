@@ -7,7 +7,8 @@
 <body>
     <p>The distributed messenger. <a href="{{ url_for('home_page') }}">List of channels.</a> </p>
     {% if channel %}
-        <h1>Channel {{ channel.name }}</h1>
+        <h1>Heyloo. You have entered my guessing game. Enter a number between 0 and 50. Happy Playing!</h1>
+        
 
             {% for message in messages %}
                 <h2>{{ message.sender }}</h2>
