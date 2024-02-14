@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>List of channels</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+    <div class="container"> 
 
-<h1>List of message channels</h1>
+    <h1>List of message channels</h1>
+    <div id="messages" class="messages-container"></div>
+    <ul>
+        {% for channel in channels %}
+            <div class="message"> 
+            <a href="/show?channel={{ channel.endpoint | urlencode }}">{{ channel.name }}</a>
+            </div>
+        {% endfor %}
+    </ul>
+    </div>
 
-<ul>
-    {% for channel in channels %}
-        <li><a href="/show?channel={{ channel.endpoint | urlencode }}">{{ channel.name }}</a></li>
-    {% endfor %}
-</ul>
+    </div>
 
 </body>
 </html>
