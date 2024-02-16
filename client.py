@@ -8,6 +8,9 @@ app = Flask(__name__)
 HUB_AUTHKEY = '1234567890'
 HUB_URL = 'http://localhost:5555'
 
+#HUB_URL = 'https://temporary-server.de'
+#HUB_AUTHKEY = 'Crr-K3d-2N'
+
 CHANNELS = None
 LAST_CHANNEL_UPDATE = None
 

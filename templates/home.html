@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>List of channels</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 <body>
     <div class="container"> 
@@ -13,7 +13,8 @@
     <ul>
         {% for channel in channels %}
             <div class="message"> 
-            <a href="/show?channel={{ channel.endpoint | urlencode }}">{{ channel.name }}</a>
+            <li><a href="{{ url_for('show_channel', channel=channel.endpoint) }}">{{ channel.name }}</a></li>
+            
             </div>
         {% endfor %}
     </ul>

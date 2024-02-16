@@ -28,9 +28,14 @@ Number_to_guess = random.randint(0,50)
 
 HUB_URL = 'http://localhost:5555'
 HUB_AUTHKEY = '1234567890'
+
+#HUB_URL = 'https://temporary-server.de'
+#HUB_AUTHKEY = 'Crr-K3d-2N'
+
 CHANNEL_AUTHKEY = '0987654321'
 CHANNEL_NAME = "Number Guessing Game"
 CHANNEL_ENDPOINT = "http://localhost:5001" # don't forget to adjust in the bottom of the file
+#CHANNEL_ENDPOINT = "http://vm954.rz.uni-osnabrueck.de/user075/reverse.wsgi"
 CHANNEL_FILE = 'messages.json'
 
 
